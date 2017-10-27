@@ -21,6 +21,7 @@ app.use((req,res,next)=>{
   next();
 })
 
+
 // app.use((req,res,next)=>{
 //   res.render('maintainance.hbs',{
 //     pageTitle:'Not available',
@@ -43,6 +44,13 @@ app.get('/',(req,res)=>{
   })
 })
 
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle:'Projects',
+    head:'Projects',
+    text:'This page has details of all my previous, current and up-coming projects'
+  })
+})
 app.get('/bad',(req,res)=>{
   res.send({
   Badrequest:'could not process request'
